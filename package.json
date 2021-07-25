@@ -1,0 +1,32 @@
+{
+  "name": "estudiotattooapi",
+  "version": "1.0.0",
+  "description": "API Portifolio de um Estudio de Tatuagem",
+  "main": "./src/serve.js",
+  "scripts": {
+    "test": "jest",
+    "dev": "nodemon",
+    "seed": "node ./src/database/create-test-instances.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cinmcantu/EstudioTattooAPI.git"
+  },
+  "author": "cinmcantu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cinmcantu/EstudioTattooAPI/issues"
+  },
+  "homepage": "https://github.com/cinmcantu/EstudioTattooAPI#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "moment": "^2.29.1",
+    "sequelize": "^6.6.5",
+    "sqlite3": "^5.0.2"
+  },
+  "devDependencies": {
+    "jest": "^27.0.6",
+    "nodemon": "^2.0.12",
+    "supertest": "^6.1.4"
+  }
+}
