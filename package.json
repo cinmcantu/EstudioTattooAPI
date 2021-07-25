@@ -4,7 +4,7 @@
   "description": "API Portifolio de um Estudio de Tatuagem",
   "main": "./src/server.js",
   "scripts": {
-    "start": "node",
+    "start": "node ./src/server.js",
     "test": "jest",
     "dev": "nodemon",
     "seed": "node ./src/database/create-test-instances.js"
