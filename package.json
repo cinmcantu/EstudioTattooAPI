@@ -2,7 +2,7 @@
   "name": "estudiotattooapi",
   "version": "1.0.0",
   "description": "API Portifolio de um Estudio de Tatuagem",
-  "main": "./src/serve.js",
+  "main": "./src/server.js",
   "scripts": {
     "start": "node",
     "test": "jest",

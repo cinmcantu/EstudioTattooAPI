@@ -9,7 +9,7 @@ O projeto foi feito através [Node.js](https://nodejs.org/en/) com o framework [
 
 ### Bibliotecas externas
 Outras bibliotecas utilizadas nesse projeto foram:
-* [Nodemon](https://nodemon.io/) - para recarregar automaticamente o servidor.
+* [Nodemon](https://nodemon.io/) - para recarregar automaticamente o servidor durante o desenvolvimento.
 * [Supertest](https://github.com/visionmedia/supertest#readme) - para rodar testes de rota.
 
 
@@ -36,7 +36,7 @@ Abra o terminal (Linux/Mac) ou o PowerShell (Windows) e siga os passos abaixo.
 
     `npm run start`
 
-    A porta padrão é a __3003__. Caso queira alterá-la, procure a linha `const port = 3003` no arquivo /serve.js e altere o número 3003 para sua porta de preferência.
+    A porta padrão é a __3003__. Caso queira alterá-la, procure a linha `const port = 3003` no arquivo /server.js e altere o número 3003 para sua porta de preferência.
 
 ---
 
@@ -79,7 +79,7 @@ RESPOSTA
       "artist_id": 2,
       "description": "Pokemon",
       "size": "medium",
-      "tag": "Geek",
+      "tag": "geek",
       "color": "colored",
       "avaliable": true,
       "createdAt": "2021-07-25T19:11:08.684Z",
@@ -90,7 +90,7 @@ RESPOSTA
       "artist_id": 2,
       "description": "Bart from The Simpsons",
       "size": "small",
-      "tag": "Cartoon",
+      "tag": "cartoon",
       "color": "colored",
       "avaliable": true,
       "createdAt": "2021-07-25T19:11:08.684Z",
@@ -112,7 +112,7 @@ Resposta para id = 1:
       "artist_id": 2,
       "description": "Pokemon",
       "size": "medium",
-      "tag": "Geek",
+      "tag": "geek",
       "color": "colored",
       "avaliable": true,
       "createdAt": "2021-07-25T19:11:08.684Z",
@@ -134,7 +134,7 @@ Resposta para tag = Cartoon:
       "artist_id": 2,
       "description": "Bart from The Simpsons",
       "size": "small",
-      "tag": "Cartoon",
+      "tag": "cartoon",
       "color": "colored",
       "avaliable": true,
       "createdAt": "2021-07-25T19:11:08.684Z",
@@ -207,7 +207,7 @@ Resposta:
     "artist_id" : 1,
 	"description" : "Lion with a cross",
 	"size" : "huge",
-	"tag" : "Religion",
+	"tag" : "religion",
 	"color" : "colored",
 	"avaliable": false,
     "createdAt": "2021-07-25T19:11:08.683Z",
@@ -228,4 +228,18 @@ Resposta:
 }
 ~~~
 
+---
+
+## Testes
+Foi implementado um arquivo de testes para checar o funcionamento correto das rotas da API. Para isso foi utilizado a biblioteca Supertest com o framework [Jest](https://jestjs.io/pt-BR/)
+
+**IMPORTANTE**
+
+Para o funcionamento correto dos testes, é necessário que o banco de dados esteja populado. Para isso, antes de iniciar os testes, rode:
+
+`npm run seed`
+
+E depois rode os testes com:
+
+`npm run test`
 

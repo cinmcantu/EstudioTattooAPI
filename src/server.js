@@ -6,7 +6,7 @@ const port = 3003
 
 // Database
 const sequelize = require('./database/sequelize')
-sequelize.sync().then(()=> console.log('Database is ready'))
+sequelize.sync({ force: true }).then(() => console.log('Database is ready'))
 
 // Middleware
 app.use(express.json())
@@ -17,6 +17,9 @@ const portfolio = require('./controllers/portfolioController')
 // Routes
 portfolio(app)
 
+// // Test
+// const test = require("./test/routes.test")
+// test(app)
 
 // Listen
 app.listen(port, () => {
