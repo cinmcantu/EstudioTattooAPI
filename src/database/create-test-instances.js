@@ -5,7 +5,7 @@ const portfolios = [
         "artist_id" : 1,
         "description" : "Chinese dragon",
         "size" : "big",
-        "tag" : "Oriental",
+        "tag" : "oriental",
         "color" : "colored",
         "avaliable": false
     },
@@ -13,7 +13,7 @@ const portfolios = [
         "artist_id" : 2,
         "description" : "Pokemon",
         "size" : "medium",
-        "tag" : "Geek",
+        "tag" : "geek",
         "color" : "colored",
         "avaliable": true
     },
@@ -21,7 +21,7 @@ const portfolios = [
         "artist_id" : 2,
         "description" : "Bart from The Simpsons",
         "size" : "small",
-        "tag" : "Cartoon",
+        "tag" : "cartoon",
         "color" : "colored",
         "avaliable": true
     },

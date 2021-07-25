@@ -4,6 +4,7 @@
   "description": "API Portifolio de um Estudio de Tatuagem",
   "main": "./src/serve.js",
   "scripts": {
+    "start": "node",
     "test": "jest",
     "dev": "nodemon",
     "seed": "node ./src/database/create-test-instances.js"
@@ -20,7 +21,6 @@
   "homepage": "https://github.com/cinmcantu/EstudioTattooAPI#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "moment": "^2.29.1",
     "sequelize": "^6.6.5",
     "sqlite3": "^5.0.2"
   },

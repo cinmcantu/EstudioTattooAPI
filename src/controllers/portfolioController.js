@@ -20,6 +20,42 @@ module.exports = (app) =>{
             })
         }
     })
+    app.get('/portfolio/:id', async (req, res)=>{
+        const requestId = req.params.id
+        try{
+            const portfolio = await Portfolio.findOne({where:{id: requestId}})
+            if(!portfolio){
+                throw new Error("There is no portfolio with this id")
+            }
+            res.json({
+                "result": portfolio,
+                "count" : portfolio.length
+            })
+        }catch(e){
+            res.json({
+                "message" : `ERROR: ${e.message}`,
+                "error" : true
+            })
+        }
+    })
+    app.get('/portfolio/tag/:tag', async (req, res)=>{
+        const requestTag = req.params.tag.toLowerCase()
+        try{
+            const portfolio = await Portfolio.findOne({where:{tag: requestTag}})
+            if(!portfolio){
+                throw new Error(`There is no portfolio with the tag ${req.params.tag}`)
+            }
+            res.json({
+                "result": portfolio,
+                "count" : portfolio.length
+            })
+        }catch(e){
+            res.json({
+                "message" : `ERROR: ${e.message}`,
+                "error" : true
+            })
+        }
+    })
 
     app.post('/portfolio', async (req, res)=>{
         try{
@@ -68,7 +104,7 @@ module.exports = (app) =>{
                 "artist_id" : newParams.artist_id ? newParams.artist_id : portfolio.artist_id,
                 "description" : newParams.description ? newParams.description : portfolio.description,
                 "size" : newParams.size ? newParams.size : portfolio.size,
-                "tag" : newParams.tag ? newParams.tag : portfolio.tag,
+                "tag" : newParams.tag ? newParams.tag.toLowerCase() : portfolio.tag,
                 "color" : newParams.color ? newParams.color : portfolio.color,
                 "avaliable" : newParams.avaliable === true || newParams.avaliable === false ? newParams.avaliable : portfolio.avaliable,
             })

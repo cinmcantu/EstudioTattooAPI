@@ -17,7 +17,10 @@ Portfolio.init({
     },
     tag: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: false,
+        set      : function(val) {
+            this.setDataValue('tag', val.toLowerCase());
+        }
     },
     color: {
         type: DataTypes.STRING,
