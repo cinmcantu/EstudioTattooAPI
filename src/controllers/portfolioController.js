@@ -3,6 +3,13 @@ const Portfolio = require('../models/Portfolio')
 
 module.exports = (app) => {
 
+    app.get('/', (req, res)=>{
+        res.send(`
+        <h2>API Estudio de Tattoo</h2>
+        <p>Acesse o repoistório <a href="https://github.com/cinmcantu/EstudioTattooAPI">https://github.com/cinmcantu/EstudioTattooAPI</a> para mais informações</p>
+        `)
+    })
+
     app.get('/portfolio', async (req, res) => {
         try {
             const portfolio = await Portfolio.findAll()
