@@ -2,7 +2,8 @@
 const express = require('express')
 // Instances and variables
 const app = express()
-const port = 3003
+// const port = 3003
+const port = process.env.PORT
 
 // Database
 const sequelize = require('./database/sequelize')
