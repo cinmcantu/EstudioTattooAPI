@@ -2,8 +2,7 @@
 const express = require('express')
 // Instances and variables
 const app = express()
-// const port = 3003
-const port = process.env.PORT
+const port = process.env.PORT || 3003
 
 // Database
 const sequelize = require('./database/sequelize')
@@ -17,10 +16,6 @@ const portfolio = require('./controllers/portfolioController')
 
 // Routes
 portfolio(app)
-
-// // Test
-// const test = require("./test/routes.test")
-// test(app)
 
 // Listen
 app.listen(port, () => {
