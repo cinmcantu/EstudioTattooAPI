@@ -5,7 +5,7 @@
 // before do the tests
 
 const request = require('supertest')
-const app = require('./test-server')
+const app = require('../app')
 
 
 describe('GET Routes', () => {
