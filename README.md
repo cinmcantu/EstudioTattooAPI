@@ -36,7 +36,7 @@ Abra o terminal (Linux/Mac) ou o PowerShell (Windows) e siga os passos abaixo.
 
     `npm run start`
 
-    A porta padrão é a __3003__. Caso queira alterá-la, procure a linha `const port = 3003` no arquivo /server.js e altere o número 3003 para sua porta de preferência.
+    A porta padrão é a __3003__. Caso queira alterá-la, procure a linha `const port = process.env.PORT || 3003` no arquivo /server.js e altere o número 3003 para sua porta de preferência.
 
 ---
 
