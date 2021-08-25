@@ -1,5 +1,6 @@
 // Packages
 const express = require('express')
+const cors = require('cors')
 // Instances and variables
 const app = express()
 
@@ -10,6 +11,7 @@ sequelize.sync({}).then(() => console.log('Database is ready'))
 
 // Middleware
 app.use(express.json())
+app.use(cors())
 
 // Controllers
 const portfolio = require('./controllers/portfolioController')
